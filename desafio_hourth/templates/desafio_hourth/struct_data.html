@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Desafio</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>
+            Imagem
+        </th>
+        <th>
+            Produto
+        </th>
+        <th>
+            Data inserção na loja
+        </th>
+        <th>
+            Total de vendas
+        </th>
+
+    </tr>
+    </thead>
+    <tbody>
+
+    {% for item in result %}
+        <tr>
+            <td><img src="{{ item.product_url__image }}" style="width: 80px"/></td>
+            <td><a href="{{ item.product_url }}" target="_blank">{{ item.product_url }}</a></td>
+            <td>{{ item.product_url__created_at }}</td>
+            <td>{{ item.total_sales }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>
